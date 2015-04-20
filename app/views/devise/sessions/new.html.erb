@@ -1,9 +1,12 @@
-<div class="border-form-div">
-  <h2>Sign in</h2>
+<div class="border-form-div im">
+  <h2 class="icon-off"> Sign In</h2>
+  </br>
+  </br>
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-      <%= f.email_field :email, :autofocus => true,:placeholder => 'Email address' %>
-      <%= f.password_field :password,:placeholder => 'Password' %>
+      <h2 class="icon-large icon-envelope"></h2> <span></span><%= f.email_field :email, :autofocus => true,:placeholder => 'Email address' %>
+      <h2 class="icon-large icon-unlock"></h2> <span></span><%= f.password_field :password,:placeholder => 'Password' %>
       </br>
       <%= f.submit "Sign in",:class=>'btn btn-primary' %>
   <% end %>
 </div>
+
