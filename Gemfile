@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 gem 'rails', '4.1.5'
-gem 'mysql2'
-gem 'pg'
+gem 'mysql2',        group: :development
+gem 'pg',        group: :production
 gem 'devise'
 gem 'therubyracer'
 gem 'less-rails'
