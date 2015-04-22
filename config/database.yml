@@ -5,13 +5,13 @@
 #   gem 'sqlite3'
 #
 default: &default
-    adapter: postgresql
+    adapter: mysql2
     encoding: utf8
     reconnect: false
     database: pineapple
     pool: 5
-    username: pineapple
-    password: pineapple
+    username: root
+    password: david
     host: localhost
 
 development:
@@ -31,6 +31,6 @@ production:
       reconnect: false
       database: pineapple
       pool: 5
-      username: pineapple
-      password: pineapple
+      username: root
+      password: ROOT
   #database: db/production.sqlite3
