@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.5'
 gem 'pg','~> 0.17.0'
 gem 'devise'
+gem 'clickatell'
 gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
@@ -13,5 +14,3 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
-
-
