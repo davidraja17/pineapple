@@ -80,5 +80,5 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   
-  CLICKATELL_CONFIG = YAML.load(File.open(File.join(RAILS_ROOT, 'config', 'clickatell.yml')))
+  CLICKATELL_CONFIG = YAML.load(File.open(File.join(Rails.root, 'config', 'clickatell.yml')))
 end

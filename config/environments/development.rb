@@ -4,7 +4,7 @@ Rails.application.configure do
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
-  #CLICKATELL_CONFIG = YAML.load(File.open(File.join(RAILS_ROOT, 'config', 'clickatell.yml')))
+  CLICKATELL_CONFIG = YAML.load(File.open(File.join(Rails.root, 'config', 'clickatell.yml')))
   
   config.cache_classes = false
 
