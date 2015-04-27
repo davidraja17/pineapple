@@ -1,14 +1,18 @@
+<style>
+    .jumbotron{
+        background-image:url('/images/main.jpg') ;
+    }
+</style>
 <ul class="nav nav-tabs" role="tablist">
-  <li class="active"><%= link_to 'View list' %></li>
+  <li class="active"><%= link_to 'Home' %></li>
   <li><%= link_to 'New SMS',:controller => "sms",:action => "new"%></li>
 </ul>
 
 <div class="jumbotron">
   <% if user_signed_in? %>
-      <h1>Welcome back, trusted user!</h1>
-      <p class="lead">
-        You have signed in!  If this were a real app some sweet conent
-        would go here.  But it's just a test.  You might want to sign out now.
+      <h1 align="center">Welcome To Pineapple</h1>
+      <p class="lead" align="center">
+          we are going to show the new world!!!
       </p>
   <% else %>
       <h1>Welcome, new user!</h1>
