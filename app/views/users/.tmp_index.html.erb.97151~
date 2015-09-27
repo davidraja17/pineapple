@@ -6,19 +6,14 @@
 <ul class="nav nav-tabs" role="tablist">
   <li class="active"><%= link_to 'Home' %></li>
   <li><%= link_to 'New SMS',:controller => "sms",:action => "new"%></li>
-  <li><%= link_to 'Create Topic',:controller => "topics",:action => "new"%></li>
 </ul>
 
 <div class="jumbotron">
   <% if user_signed_in? %>
-      <!--<h1 align="center">Welcome To Pineapple</h1>
+      <h1 align="center">Welcome To Pineapple</h1>
       <p class="lead" align="center">
           we are going to show the new world!!!
-      </p>-->
-	  <% @topics.each do |topic| %>
-	  <%= topic.heading %>
-	  <%= image_tag topic.topic_pic %>
-	  <% end %>
+      </p>
   <% else %>
       <h1>Welcome, new user!</h1>
       <p class="lead">

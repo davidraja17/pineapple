@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		<% if @topic.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@topic.errors.count, "error") %> prohibited this Topic from being saved:</h2>
+ 
+    <ul>
+    <% @topic.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% else %>
+  <%= form_for(@topic,multipart: true) do |t| %>
+		<%= t.label :heading%>: <%= t.text_field :heading %><br/>
+		<%= t.label :upload_image%>: <%= t.file_field :topic_pic %><br/>
+		<%= t.label :category%>: <%= t.collection_select(:category_id,Category.all,:id,:category,prompt: true) %><br/>
+		<%= t.label :content%> <%= t.text_area :content %><br/>
+		<%= t.submit %>
+		<% end %>
+<% end %>
+	</body>
+</html>

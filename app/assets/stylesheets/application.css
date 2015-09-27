@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+/*
+ *= require bootstrap_and_overrides
+ */
 
 .border-form-div {
     max-width: 300px;

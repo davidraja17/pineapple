@@ -11,10 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150430080913) do
+ActiveRecord::Schema.define(version: 20150927134956) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  create_table "categories", force: true do |t|
+    t.string   "category"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "comments", force: true do |t|
+    t.text     "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "topics", force: true do |t|
+    t.string   "heading"
+    t.integer  "category_id"
+    t.text     "content"
+    t.integer  "like"
+    t.integer  "dislike"
+    t.string   "topic_pic"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -34,6 +55,11 @@ ActiveRecord::Schema.define(version: 20150430080913) do
     t.string   "name"
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
+    t.integer  "age"
+    t.date     "date_of_birth"
+    t.string   "marital_status"
+    t.string   "qualification"
+    t.string   "profile_pic"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
